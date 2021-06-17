@@ -2,11 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
-        <img
-          alt="logo"
-          src="../assets/img/cw-logo.png"
-          height="45"
-        />
+        Moving Truck
       </div>
     </router-link>
     <button
@@ -23,48 +19,16 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <router-link :to="{ name: 'Home' }" class="nav-link">
-            Home
-          </router-link>
-        </li>
-        <li class="nav-item">
         </li>
       </ul>
       <span class="navbar-text">
-        <button
-          class="btn btn-outline-primary text-uppercase"
-          @click="login"
-          v-if="!user.isAuthenticated"
+        <a
+          class="btn btn-info"
+          target="_blank"
+          href="https://vuejs.org/v2/guide/transitions.html"
         >
-          Login
-        </button>
-
-        <div class="dropdown" v-else>
-          <div
-            class="dropdown-toggle"
-            @click="state.dropOpen = !state.dropOpen"
-          >
-            <img
-              :src="user.picture"
-              alt="user photo"
-              height="40"
-              class="rounded"
-            />
-            <span class="mx-3">{{ user.name }}</span>
-          </div>
-          <div
-            class="dropdown-menu p-0 list-group w-100"
-            :class="{ show: state.dropOpen }"
-            @click="state.dropOpen = false"
-          >
-            <div
-              class="list-group-item list-group-item-action hoverable"
-              @click="logout"
-            >
-              logout
-            </div>
-          </div>
-        </div>
+          Transition Groups Docs
+        </a>
       </span>
     </div>
   </nav>
