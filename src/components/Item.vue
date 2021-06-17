@@ -1,5 +1,5 @@
 <template>
-  <div class="col-1" @dragstart="PrepToMove">
+  <div class="col-1">
     <div class="item shadow">
       <img :src="itemProp.url" alt="img" />
     </div>
@@ -7,14 +7,11 @@
 </template>
 
 <script>
-import { itemService } from '../services/ItemService'
 export default {
   props: { itemProp: { type: Object, required: true }, roomId: { type: Number, required: true } },
   setup(props) {
     return {
       PrepToMove() {
-        itemService.PrepToMove(props.itemProp, props.roomId)
-        // console.log('item to move', props.itemProp.name)
       }
     }
   }
